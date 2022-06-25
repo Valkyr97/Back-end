@@ -1,6 +1,6 @@
-const fieldsValidation = require('./fieldsValidation');
-const jwtValidation = require('./jwtValidation');
-const permissValidation = require('./permissValidation');
+const fieldsValidation = require('./fields-validation');
+const jwtValidation = require('./jwt-validation');
+const permissValidation = require('./permiss-validation');
 
 module.exports = {
   ...fieldsValidation,

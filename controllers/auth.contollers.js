@@ -2,13 +2,13 @@ const { response, request } = require('express');
 const bcryptjs = require('bcryptjs');
 
 const generateJWT = require('../helpers/jwt-generator');
-const User = require('../models/user');
+const { User } = require('../models');
 
 const login = async (req = request, res = response) => {
   const { password, mail } = req.body;
 
   const user = await User.findOne({ mail });
-  
+
   // Mail validation
   if (!user) {
     return res.status(400).json({
